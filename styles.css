@@ -1,105 +1,493 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;
-    color: white;
-    background: black;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-header .logo img {
-    height: 40px;
-}
-header nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-header nav ul li a:hover {
-    color: #ff3366;
-}
-header .social-links a {
-    margin-left: 10px;
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-}
-header .social-links a:hover {
-    color: #ffcc00;
+/*Index*/ 
+/* Reset styles */ 
+body, html { 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background: #000; 
+    color: #fff; 
+} 
+ 
+/* Common styles */ 
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #000000; 
+    color: #fff; 
+    padding: 5px 20px; 
+} 
+ 
+header .logo img { 
+    height: 30px; 
+} 
+ 
+header nav ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    gap: 20px; 
+    
+} 
+ 
+ 
+header nav ul li { 
+    display: inline; 
+    
+} 
+ 
+header nav ul li a { 
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 16px; 
+    
+} 
+ 
+nav ul li a.active, nav ul li a:hover { 
+    color: #3d0f07; 
+    /* Highlight color */ 
+} 
+ 
+ 
+header .social-icons a { 
+    list-style: none; 
+    color: #fff; 
+    margin-left: 10px; 
+    font-size: 20px; 
+    text-decoration: none; 
+} 
+ 
+header .social-icons ul li { 
+    display: inline; 
+    gap: 10px; 
+} 
+ 
+main { 
+    text-align: center; 
+} 
+ 
+footer { 
+    background-color: #000000; 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px; 
+    position: fixed; 
+    width: 100%; 
+    bottom: 0; 
+} 
+ 
+.orange-blood { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    scroll-margin-bottom: 10px; 
+} 
+ 
+.orange-blood img{
+    max-width: 100%;
+    height: fit-content;
 }
 
-/* Page Sections */
-.page-section {
-    display: none;
-    padding: 100px 20px;
-    min-height: 100vh;
-    text-align: center;
+.schedule{
+    margin: 0; 
+    font-family: sans-serif; 
+    background: #000; 
+    color: #fff; 
 }
-.page-section.active {
-    display: block;
+
+
+.logo { 
+    display: flex; 
+    justify-content: flex-start; 
+    margin-left: 20px; 
 }
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-    color: white;
-    padding: 20px;
+
+
+/*About*/
+.db-group-image{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    scroll-margin-bottom: 10px;
+    padding-left: 6px;
 }
-.background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
+
+.db-group-image img{
+    max-width: 100%;
+    height: fit-content;
+}
+/*profile*/
+
+.group-image{
+    scroll-margin-bottom: 10px;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1;
 }
-.album-grid, .profile-grid, .gallery-grid {
+
+.group-image img{
+    max-width: 100%;
+    height: fit-content;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+
+.all-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
     gap: 20px;
-    justify-content: center;
+    margin-top: 20px;
 }
-.album-card, .profile-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+/* first 4 members*/
+.member {
     text-align: center;
-    width: 200px;
+    background-color: #2d3c40;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.album-card img, .profile-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-.gallery-grid img {
-    width: 200px;
-    height: 200px;
+
+.member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
     object-fit: cover;
-    border-radius: 10px;
 }
+
+.member h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.member p {
+    font-size: 14px;
+    margin: 0;
+    color: #aaa;
+}
+
+/* Hover Effects */
+.member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.member1 {
+    text-align: center;
+    background-color: #2d3c40;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.member1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.member1 h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.member1 p {
+    font-size: 14px;
+    margin: 0;
+    color: #aaa;
+}
+
+/* Hover Effects */
+.member1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Footer */
 footer {
+    background: #000;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+/* Album  */
+.album-main{
     text-align: center;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.album-main img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.album-main h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.album-main p {
+    font-size: 14px;
+    margin: 0;
+    color: #aaa;
+}
+
+.album-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.album-item {
+    text-align: center;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 100px;
+}
+
+.album-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.album-item h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.album-item p {
+    font-size: 14px;
+    margin: 0;
+    color: #aaa;
+}
+
+/* Hover Effects */
+.album-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/*About*/
+
+.db-group-image{
+scroll-margin-bottom: 10px;
+width: fit-content;
+height: fit-content;
+}
+
+.db-group-image img{
+max-width: 100%;
+height: fit-content;
+}
+
+.awards{
+    margin-top: 100px;
+}
+
+.yrone{
+margin-bottom: 50px;
+}
+
+.yrtwo{
+    margin-bottom: 50px;
+}
+
+.yrthree{
+    margin-bottom: 100px;
+}
+
+/* Daydream */
+.albums-all{
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.albums-all img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.albums-all h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.albums-all p {
+    font-size: 20px;
+    margin: 20px;
+    color: #ffffff;
+}
+
+.info_day{
+    margin-bottom: 50px;
+}
+
+.info_dayTrack{
+    margin-bottom: 50px;
+}
+ 
+.info_dayMV{
+    margin-bottom: 50px;
+}
+
+.info_BN{
+    margin-bottom: 50px;
+}
+
+.info_WM{
+    margin-bottom: 50px;
+}
+
+/*Dark Blood*/
+.info_dark{
+    margin-bottom: 50px;
+}
+
+.info_DBconcept{
+    margin-bottom: 50px;
+}
+ 
+.info_conceptfull{
+    margin-bottom: 50px;
+}
+
+.info_concepthalf{
+    margin-bottom: 50px;
+}
+
+.info_conceptnew{
+    margin-bottom: 50px;
+}
+
+/*Romance : Untold*/
+.info_untoldcinema{
+    margin-bottom: 50px;
+}
+
+.info_conceptarcanum{
+    margin-bottom: 50px;
+}
+ 
+.info_conceptconcessio{
+    margin-bottom: 50px;
+}
+
+.info_conceptengene{
+    margin-bottom: 50px;
+}
+
+.info_untoldMV{
+    margin-bottom: 50px;
+}
+
+
+/*Orange Blood*/
+.info_orange{
+    margin-bottom: 50px;
+}
+
+.info_OBconcept{
+    margin-bottom: 50px;
+}
+ 
+.info_conceptksana{
+    margin-bottom: 50px;
+}
+
+.info_conceptkalpa{
+    margin-bottom: 50px;
+}
+
+.info_conceptOBengene{
+    margin-bottom: 50px;
+}
+
+/*Manifesto*/
+.info_manifesto{
+    margin-bottom: 50px;
+}
+
+.info_WTL{
+    margin-bottom: 50px;
+}
+ 
+.info_conceptD{
+    margin-bottom: 50px;
+}
+
+.info_conceptJ{
+    margin-bottom: 50px;
+}
+
+.info_conceptM{
+    margin-bottom: 50px;
+}
+
+.info_paradoxxxMV{
+    margin-bottom: 50px;
+}
+
+/*styling for mobile*/
+@media (max-width: 768px){
+    iframe{
+}
 }
