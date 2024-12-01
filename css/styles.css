@@ -95,7 +95,10 @@ footer {
     color: #fff; 
 }
 
-
+.iframe { 
+    margin-top: 100px; 
+} 
+ 
 .logo { 
     display: flex; 
     justify-content: flex-start; 
@@ -350,7 +353,7 @@ margin-bottom: 50px;
 }
 
 /* Daydream */
-.albums-all{
+.albums-day{
     text-align: center;
     padding: 10px;
     border-radius: 8px;
@@ -358,7 +361,7 @@ margin-bottom: 50px;
 
 }
 
-.albums-all img {
+.albums-day img {
     max-width: 40%;
     height: auto;
     border-radius: 8px;
@@ -366,128 +369,64 @@ margin-bottom: 50px;
     object-fit: cover;
 }
 
-.albums-all h2 {
+.albums-day h2 {
     font-size: 18px;
     margin: 10px 0 5px;
 }
 
-.albums-all p {
+.albums-day p {
     font-size: 20px;
     margin: 20px;
     color: #ffffff;
 }
 
-.info_day{
-    margin-bottom: 50px;
-}
-
-.info_dayTrack{
-    margin-bottom: 50px;
-}
- 
-.info_dayMV{
-    margin-bottom: 50px;
-}
-
-.info_BN{
-    margin-bottom: 50px;
-}
-
-.info_WM{
-    margin-bottom: 50px;
-}
-
-/*Dark Blood*/
-.info_dark{
-    margin-bottom: 50px;
-}
-
-.info_DBconcept{
-    margin-bottom: 50px;
-}
- 
-.info_conceptfull{
-    margin-bottom: 50px;
-}
-
-.info_concepthalf{
-    margin-bottom: 50px;
-}
-
-.info_conceptnew{
-    margin-bottom: 50px;
-}
-
-/*Romance : Untold*/
-.info_untoldcinema{
-    margin-bottom: 50px;
-}
-
-.info_conceptarcanum{
-    margin-bottom: 50px;
-}
- 
-.info_conceptconcessio{
-    margin-bottom: 50px;
-}
-
-.info_conceptengene{
-    margin-bottom: 50px;
-}
-
-.info_untoldMV{
-    margin-bottom: 50px;
-}
-
-
-/*Orange Blood*/
-.info_orange{
-    margin-bottom: 50px;
-}
-
-.info_OBconcept{
-    margin-bottom: 50px;
-}
- 
-.info_conceptksana{
-    margin-bottom: 50px;
-}
-
-.info_conceptkalpa{
-    margin-bottom: 50px;
-}
-
-.info_conceptOBengene{
-    margin-bottom: 50px;
-}
-
-/*Manifesto*/
-.info_manifesto{
-    margin-bottom: 50px;
-}
-
-.info_WTL{
-    margin-bottom: 50px;
-}
- 
-.info_conceptD{
-    margin-bottom: 50px;
-}
-
-.info_conceptJ{
-    margin-bottom: 50px;
-}
-
-.info_conceptM{
-    margin-bottom: 50px;
-}
-
-.info_paradoxxxMV{
-    margin-bottom: 50px;
-}
-
 /*styling for mobile*/
-@media (max-width: 768px){
-    iframe{
+.albums-all {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 50px;
+  }
+  
+  .responsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
-}
+
+@media screen and (max-width: 768px) {
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start; 
+      padding: 15px 10px;
+    }
+  
+    .header a.logo {
+      font-size: 22px;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .header-right {
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .header-right a {
+      padding: 10px;
+      font-size: 16px;
+      text-align: left;
+    }
+    header .social-icons ul {
+        display: flex;
+        flex-direction: row;
+    }
+  }
